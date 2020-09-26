@@ -12,4 +12,4 @@ html:
   --require features --no-source --color \n
   --format html --out reports/test_report.html \n
   --format message and stand-alone json-formatter --out reports/cucumber.json \n
-  --tags '@tour or @profile'
+  --tags '@login or @e2e'

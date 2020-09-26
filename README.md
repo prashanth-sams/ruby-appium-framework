@@ -1,14 +1,19 @@
 # Vivino Appium | Boilerplate
 > A basic ruby appium framework with cucumber flavor on Vivino Android app
 
+1. Live Demo Test 
+https://vivino-test.s3.amazonaws.com/3ntkCGK.mp4
+2. Cucumber Test Report
+https://vivino-cucumber-report.s3.amazonaws.com/index.htm
+3. Github actions Rubocop check `Linter` 
+https://github.com/prashanth-sams/vivino/pull/2/checks?check_run_id=1170062321
+
 ## Highlights
 - Added a complete end-to-end scenario from `user registration -> login` 
 - Used cucumber version `cucumber 5.1.0 (latest)`
 - Executed tests in both `browserstack` and `local` environments 
-- Used three different `HTML` reporters
-- Github actions for `Linter`
-- Ruby standards through-out the framework and tests
-
+- Applied Ruby standards through-out the framework and tests
+- Cleared Rubocop `Linter` check through Github actions
 
 ## Steps before Run
 > **Note:** make sure that you have `RVM` and `Ruby` installed on prior; install `allure cli` which is optional

@@ -43,15 +43,3 @@ After do |scenario|
   end
   driver.driver_quit
 end
-
-# generate report builder html report at exit
-at_exit do
-  ReportBuilder.configure do |config|
-    config.input_path = 'result/cucumber'
-    config.report_path = 'result'
-    config.report_types = %i[retry html]
-    config.report_title = 'Vivino Test Results'
-    config.additional_info = {project: 'Vivino', app: 'Android', environment: 'Production'}
-  end
-  ReportBuilder.build_report
-end
