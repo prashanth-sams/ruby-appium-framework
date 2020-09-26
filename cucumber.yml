@@ -7,7 +7,7 @@ default:
   --retry 1 \n
   --publish
 
-# basic cucumber html reporter profile
+# generic cucumber html reporter profile
 html:
   --require features --no-source --color \n
   --format html --out reports/test_report.html \n

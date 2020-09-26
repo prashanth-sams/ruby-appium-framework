@@ -1,4 +1,4 @@
-### Vivino Appium | Boilerplate
+# Vivino Appium | Boilerplate
 > A basic ruby appium framework with cucumber flavor on Vivino Android app
 
 ## Highlights
@@ -7,7 +7,7 @@
 - Executed tests in both `browserstack` and `local` environments 
 - Used three different `HTML` reporters
 - Github actions for `Linter`
-- Followed ruby standards through-out the framework and tests
+- Ruby standards through-out the framework and tests
 
 
 ## Steps before Run
@@ -37,6 +37,8 @@ bundle install
 | Action         | Command            |
 | -------------- | ---------          |
 | Bash runner    | `bundle exec bash runner/prod/local.sh` |
-| Default        | `bundle rake spec` |
-| Browserstack runner | `bundle exec bash runner/prod/browserstack.sh` |
-| Allure report | `bundle rake allure` |
+| Default        | `bundle exec rake vivino:run` |
+
+**Note:** Set `BROWSERSTACK=ON` for running tests through my browserstack account 
+
+![Cucumber 5.1.0 report](https://i.imgur.com/FNmYyEP.png)

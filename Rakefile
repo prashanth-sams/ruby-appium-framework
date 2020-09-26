@@ -6,7 +6,8 @@ require 'json'
 namespace :vivino do
   desc 'Vivino task scheduler #allure'
   task :run, :platform do |_task, args|
-    ENV['PLATFORM'] = args.platform.downcase
+    platform = args.platform || 'android'
+    ENV['PLATFORM'] = platform.downcase
 
     Cucumber::Rake::Task.new(:local) do |t|
       if ENV['BROWSERSTACK'] && ENV['BROWSERSTACK'] == 'ON'
