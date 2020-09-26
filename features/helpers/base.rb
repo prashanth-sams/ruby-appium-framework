@@ -25,6 +25,7 @@ module VIVINO
     end
   end
 
+  # custom assert text wrapper to avoid test flakiness
   def assert_text(_locator, expected, loop = 30, secs = 0.5)
     while loop > 1
       begin
@@ -39,6 +40,7 @@ module VIVINO
     end
   end
 
+  # returns a boolean value if element is present or not
   def is_exist?(locator)
     @driver.find_element(locator[1]).displayed?
   rescue Selenium::WebDriver::Error::NoSuchElementError
@@ -47,6 +49,7 @@ module VIVINO
     false
   end
 
+  # commands swipe action until an element is found
   def swipe_until(locator, count = 10)
     implicit_wait(0.5)
 
@@ -61,16 +64,19 @@ module VIVINO
     implicit_wait
   end
 
+  # global wait
   def implicit_wait(secs = 20)
     driver.set_wait(secs)
   end
 
+  # pseudo element to avoid stale element error
   def pseudo_element(name, locator)
     send(:define_method, name) do
       [name, locator]
     end
   end
 
+  # helps you to breakpoint logs for better debugging
   def start_loggers
     Dir.mkdir('./logs') unless File.exist?('./logs')
     Dir['./logs/*.log'].map { |junk_file| File.delete(junk_file) }
