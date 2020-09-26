@@ -1,0 +1,58 @@
+AllCops:
+  TargetRubyVersion: 2.7.0
+  DisplayStyleGuide: true
+  Exclude:
+    - 'logs/**'
+    - 'allure-report/**/*'
+    - 'reports/**/*'
+
+Lint:
+  Enabled: true
+
+Metrics/MethodLength:
+  Max: 20
+
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - 'Rakefile'
+
+Metrics/ClassLength:
+  Max: 140
+
+Metrics/AbcSize:
+  Max: 50
+
+Security/Eval:
+  Exclude:
+    - 'features/helpers/base.rb'
+
+Metrics/BlockLength:
+  Max: 30
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+Layout/FirstHashElementIndentation:
+  Exclude:
+    - 'features/support/hooks.rb'
+
+Documentation:
+  Enabled: false
+
+Style/MixinUsage:
+  Exclude:
+    - 'features/support/env.rb'
+
+GlobalVars:
+  AllowedVariables:
+    - $logger
+    - $elem_locator
+
+Naming/PredicateName:
+  Exclude:
+    - 'features/helpers/base.rb'
+
+Style/EvalWithLocation:
+  Exclude:
+    - 'features/helpers/base.rb'
