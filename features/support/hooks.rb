@@ -44,15 +44,14 @@ After do |scenario|
   driver.driver_quit
 end
 
+# generate report builder html report at exit
 at_exit do
-  # ENV['TITLE'] = "TEST AUTOMATION REPORT" if ENV['TITLE'].nil?
-  # begin
-  #   report_file = File.absolute_path("report.html", "reports")
-  #   doc = File.read(report_file)
-  # rescue
-  #   report_file = File.absolute_path("test_report.html", "reports")
-  #   doc = File.read(report_file)
-  # end
-  # new_doc = doc.sub("Cucumber Features", "#{ENV['TITLE']}")
-  # File.open(report_file, "w") {|file| file.puts new_doc}
+  ReportBuilder.configure do |config|
+    config.input_path = 'result/cucumber'
+    config.report_path = 'result'
+    config.report_types = %i[retry html]
+    config.report_title = 'Vivino Test Results'
+    config.additional_info = {project: 'Vivino', app: 'Android', environment: 'Production'}
+  end
+  ReportBuilder.build_report
 end
