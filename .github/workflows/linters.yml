@@ -1,10 +1,7 @@
-name: Linters
-
 on: pull_request
-
+name: Linters
 env:
   FORCE_COLOR: 1
-
 jobs:
   rubocop:
     name: Rubocop
