@@ -1,12 +1,5 @@
-# Vivino Appium | Boilerplate
+# Ruby Appium Framework | Boilerplate
 > A basic ruby appium framework with cucumber flavor on Vivino Android app
-
-1. Live Demo Test 
-https://vivino-test.s3.amazonaws.com/3ntkCGK.mp4
-2. Cucumber Test Report
-https://vivino-cucumber-report.s3.amazonaws.com/index.htm
-3. Github actions Rubocop check `Linter` 
-https://github.com/prashanth-sams/vivino/pull/2/checks?check_run_id=1170062321
 
 ## Highlights
 - Added a complete end-to-end scenario from `user registration -> login` 
